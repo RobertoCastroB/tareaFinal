@@ -36,8 +36,8 @@ void serve(int s) {
 	
 	//route & type
 	char routeT[200]; // used for strtok.
-	char *route[200];
-	char *type[50];
+	char route[200];
+	char type[50];
 	
     // Reads the request from the client
     while( fgets(buffer, MSGSIZE, sin) != NULL ) {
@@ -74,17 +74,17 @@ void serve(int s) {
     sprintf(buffer, "Date: Fri, 31 Dec 1999 23:59:59 GMT\r\n");
     fputs(buffer, sout);
     
-    if (type == "html"){
+    if (strcmp(type,"html") == 0){
     	sprintf(buffer, "Content-Type: text/html\r\n");
     	fputs(buffer, sout);	
 	}
 	
-	else if(type == "jpg"){
+	else if(strcmp(type,"jpg") == 0){
 		sprintf(buffer, "Content-Type: image/jpg\r\n");
     	fputs(buffer, sout);
 	}
 	
-	else if(type == "pdf"){
+	else if(strcmp(type,"pdf") == 0){
 		sprintf(buffer, "Content-Type: application/pdf\r\n");
     	fputs(buffer, sout);
 	}
