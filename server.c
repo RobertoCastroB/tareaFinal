@@ -78,8 +78,14 @@ void serve(int s) {
     	sprintf(buffer, "Content-Type: text/html\r\n");
     	fputs(buffer, sout);	
 	}
+	
 	else if(type == "jpg"){
 		sprintf(buffer, "Content-Type: image/jpg\r\n");
+    	fputs(buffer, sout);
+	}
+	
+	else if(type == "pdf"){
+		sprintf(buffer, "Content-Type: application/pdf\r\n");
     	fputs(buffer, sout);
 	}
 
