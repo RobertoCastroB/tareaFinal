@@ -50,9 +50,9 @@ void serve(int s) {
         		if (index == 2){
         			strcpy(routeT, tokenSpace+1);
         			strcpy(route, tokenSpace+1);
-        			index++;
-        			tokenSpace = strtok(NULL,space);
 				}
+			index++;
+        		tokenSpace = strtok(NULL,space);
 			}
 			tokenDot = strtok(routeT, dot);
 			while (tokenDot != NULL){
