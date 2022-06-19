@@ -47,16 +47,16 @@ void serve(int s) {
         	//Parse 
         	tokenSpace = strtok(buffer, space);
         	while (tokenSpace != NULL){
-        		if (indice == 2){
-        			strcopy(routeT, tokenSpace+1);
-        			strcopy(route, tokenSpace+1);
+        		if (index == 2){
+        			strcpy(routeT, tokenSpace+1);
+        			strcpy(route, tokenSpace+1);
         			index++;
         			tokenSpace = strtok(NULL,space);
 				}
 			}
 			tokenDot = strtok(routeT, dot);
 			while (tokenDot != NULL){
-				strcopy(type, tokenDot);
+				strcpy(type, tokenDot);
 				tokenDot = strtok(NULL, dot);
 			}	
 		}
