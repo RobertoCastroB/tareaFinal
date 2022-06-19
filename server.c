@@ -35,9 +35,9 @@ void serve(int s) {
 	char *tokenDot;
 	
 	//route & type
-	char *routeT; // used for strtok.
-	char *route;
-	char *type;
+	char routeT[200]; // used for strtok.
+	char *route[200];
+	char *type[50];
 	
     // Reads the request from the client
     while( fgets(buffer, MSGSIZE, sin) != NULL ) {
